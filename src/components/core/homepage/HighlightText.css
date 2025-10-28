@@ -1,0 +1,5 @@
+.textBg {
+  background: linear-gradient(90deg,rgba(12, 51, 78), rgba(23, 95, 149), rgba(55, 21, 65)); 
+  color: white;
+  font-weight: bold;
+}

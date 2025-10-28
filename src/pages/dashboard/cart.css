@@ -1,0 +1,10 @@
+.background{
+    background: blue;
+    transform: translate(120%,50%);
+    width: 300px;
+    height: 300px;
+    filter: blur(250px);
+}
+img{
+    background: cover;
+}

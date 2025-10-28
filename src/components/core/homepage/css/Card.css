@@ -1,0 +1,7 @@
+.maincard{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: pink;
+    position: relative;
+}

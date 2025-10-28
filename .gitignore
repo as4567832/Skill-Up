@@ -1,0 +1,44 @@
+# 👉 Node dependencies
+node_modules/
+server/node_modules/
+
+# 👉 Build outputs
+build/
+dist/
+server/dist/
+
+# 👉 Environment variables (keep secrets private)
+.env
+server/.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 👉 Temporary / uploaded files
+temp/
+server/temp/
+server/uploads/
+server/cache/
+*.tmp
+
+# 👉 Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# 👉 OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 👉 Coverage / Testing
+coverage/
+
+# 👉 Misc
+.pnp
+.pnp.js
+path/to/largefile.mp4

@@ -1,0 +1,106 @@
+.listings{
+position: relative;
+
+}
+
+.listings div {
+  position: absolute;
+  transform: translate(-50%, -80%); /* <-- CORRECTED values for perfect centering */
+  top: 50%; /* <-- Added for vertical centering */
+  left: 50%; /* <-- Added for horizontal centering */
+
+  /* Additional styling for the individual listing item: */
+  width: 90%; /* Example size */
+  height: 220px; /* Example size */
+  background-color: white;
+  box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  border-radius: 5px;
+  box-sizing: border-box; /* Good practice for explicit sizing */
+  z-index: 1; /* For stacking order if multiple items overlap */
+}
+
+.spanitems1{
+  border-right: 1px solid rgb(0, 0, 0);
+  border-top-right-radius: 1px;
+  padding-right: 18px;
+  overflow: hidden;
+  
+
+}
+
+.spanitems1 img:hover{
+  width: 220px;
+  cursor: pointer;
+}
+
+.spanitems2 img:hover{
+  width: 220px;
+  cursor: pointer;
+}
+.spanitems2{
+  text-align: center;
+  border-right: 1px solid rgb(0, 0, 0);
+  border-top-right-radius: 1px;
+  padding-right: 50px;
+  overflow: hidden;
+}
+.spanitems3{
+  text-align: center;
+  border-right: 1px solid rgb(0, 0, 0);
+  border-top-right-radius: 1px;
+  padding-right: 60px;
+  overflow: hidden;
+
+}
+
+span img:hover{
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+    to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.spanitems3 img:hover{
+  width: 220px;
+  cursor: pointer;
+}
+
+.spanitems4{
+  text-align: center;
+  border-right: 1px solid rgb(0, 0, 0);
+  border-top-right-radius: 1px;
+  padding-right: 40px;
+  overflow: hidden;
+
+}
+.spanitems4 img:hover{
+  width: 220px;
+  cursor: pointer;
+}
+
+
+
+span img{
+  opacity: 0;
+  animation: fade 1s ease-in forwards;
+}
+
+@keyframes fade{
+  from{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+    to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

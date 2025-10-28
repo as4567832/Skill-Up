@@ -1,0 +1,16 @@
+.mainelem{
+justify-content: start;
+padding-top: 20px;
+align-items: start;
+background-image: url('../../../../assets/images/section2.png');
+background: cover;
+padding-left:20px;
+height: 140vh;
+}
+
+.videobg{
+    width: 50%;
+}
+
+
+
