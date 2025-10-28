@@ -1,70 +1,56 @@
-const express = require("express");
-const path = require("path");
-const cookieParser = require("cookie-parser");
-const cors = require("cors");
-const fileUpload = require("express-fileupload");
-require("dotenv").config();
-
+const express = require('express');
 const app = express();
 
-// Import routes
 const userRoutes = require("./routes/User");
 const profileRoutes = require("./routes/Profile");
 const paymentRoutes = require("./routes/Payment");
 const courseRoutes = require("./routes/Course");
-const categoryRoutes = require("./routes/category");
+const categoryRoutes = require('./routes/category');
 
-// Database + Cloudinary
-const database = require("./config/database");
+const database = require('./config/database');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
 const cloudinaryConnect = require("./config/Cloudinary");
+const fileUpload = require("express-fileupload");
 
-// Connect to DB
+require('dotenv').config();
+const PORT = process.env.PORT || 4000;
+//connect to database
 database.connect();
-
-// Middlewares
+//add middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
-    credentials: true,
-  })
-);
-app.use(
-  fileUpload({
-    useTempFiles: true,
-    tempFileDir: "temp",
-  })
-);
-
-// Cloudinary
+app.use(cors({
+    origin:"http://localhost:3000",
+    credentials:true,
+}));
+app.use(fileUpload({
+    useTempFiles:true,
+    tempFileDir:"temp",
+}));
+//cloudinary connection
 cloudinaryConnect();
 
-// API Routes
-app.use("/api/v1/auth", userRoutes);
-app.use("/api/v1/profile", profileRoutes);
-app.use("/api/v1/course", courseRoutes);
-app.use("/api/v1/payment", paymentRoutes);
-app.use("/api/v1/category", categoryRoutes);
+//routes
 
-// ✅ Serve Frontend (React build)
-app.use(express.static(path.join(__dirname, "../build")));
+app.use("/api/v1/auth",userRoutes);
+app.use("/api/v1/profile",profileRoutes);
+app.use("/api/v1/course",courseRoutes);
+app.use("/api/v1/payment",paymentRoutes);
+app.use("/api/v1/category",categoryRoutes);
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../build", "index.html"));
+//a
+app.get("/",(req,res)=>{
+    return res.json({
+        success:true, 
+        message:"Your server is up and running"
+    })
 });
 
-app.get("/",(req,res)=>{
-    res.send({
-        activeStatus:true,
-        error:false
-    })
+app.listen(PORT,()=>{
+    // console.log(`app is running at port ${PORT}`);
 })
-// Export app for Vercel
-module.exports = app;
 
-// ✅ Local development (only runs if not on Vercel)
-const PORT = process.env.PORT || 4000;
-if (process.env.NODE_ENV !== "production") {
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-}
+
+
+
