@@ -32,7 +32,7 @@ app.use(cors({
 
 app.use(fileUpload({
     useTempFiles:true,
-    tempFileDir:"temp",
+    tempFileDir:"./temp",
 }));
 //cloudinary connection
 cloudinaryConnect();
