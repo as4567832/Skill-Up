@@ -19,6 +19,7 @@ import AboutUs from './pages/aboutus';
 import Cart from './pages/dashboard/cart';
 import ShoppingCart from './pages/dashboard/homecart';
 function App() {
+  console.log("BASE_URL =", process.env.REACT_APP_BASE_URL);
   useEffect(() => {
     AOS.init({
       duration: 1000, // animation duration in ms
