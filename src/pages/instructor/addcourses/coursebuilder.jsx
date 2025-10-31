@@ -74,9 +74,9 @@ function CourseBuilder() {
       {sections && sections.length > 0 ? (
   <div className="flex flex-col gap-3 my-10 w-full">
     {sections.map((section) => (
-      <div>
+      <div key={section._id}>
         <div
-        key={section._id}
+        // key={section._id}
         className="flex justify-between items-center"
       >
         {/* Section Name on the left */}

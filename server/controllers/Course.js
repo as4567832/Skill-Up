@@ -98,6 +98,7 @@ if (req.files && req.files.thumbnailImage) {
       data: newCourse,
     });
   } catch (error) {
+    console.error("Create Course Error:", error);
     // console.error(error);
     return res.status(500).json({
       success: false,
