@@ -14,7 +14,7 @@ function ContactUs() {
       </div>
 
       <div className="md:flex md:flex-row flex-col p-5 gap-10">
-        <div className="w-[50%]">
+        <div className="md:w-[50%] ">
             <div className=" bg-[#161821] md:p-10 p-5 rounded-xl">
           <h1 className="md:text-4xl mb-5 text-2xl font-bold text-white">
             Contact Information
@@ -41,10 +41,10 @@ function ContactUs() {
             </div>
           </div>
         </div>
-        <div className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-7xl mt-5 p-20 flex items-center justify-center text-red-600 rounded-xl "><IoLocationSharp /></div>
+        <div className="w-full mb-10 bg-gradient-to-r from-purple-500 to-blue-600 text-7xl mt-5 p-20 flex items-center justify-center text-red-600 rounded-xl "><IoLocationSharp /></div>
         </div>
 
-        <div className="md:w-[50%] bg-[#161821] md:p-10 p-5 rounded-xl text-white">
+        <div className="md:w-[50%] bg-[#161821] mb-10 md:mb-10 md:p-10 p-5 rounded-xl text-white">
           <form action="">
             <label htmlFor="">Name</label>
             <input
@@ -74,7 +74,7 @@ function ContactUs() {
               className="resize-none h-32 w-[100%] bg-transparent focus:outline-none border border-gray-600 rounded-lg p-2"
               placeholder="Your Message"
             />
-            <button className="w-full p-2 bg-gradient-to-r from-purple-700 to-blue-600 rounded-xl mt-5">Send Message</button>
+            <button className="w-full transition-all duration-300 transform hover:scale-105 p-2 bg-gradient-to-r from-purple-700 to-blue-600 rounded-xl mt-5">Send Message</button>
           </form>
         </div>
       </div>

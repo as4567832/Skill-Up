@@ -4,7 +4,7 @@ import { getUserEnrolledCourses } from "../../services/operations/profileApi";
 import { FaStar } from "react-icons/fa6";
 import { IoPersonSharp } from "react-icons/io5";
 
-function EnrolledCourses() {
+function EnrolledCourses({onStartLearning}) {
   const { token } = useSelector((state) => state.signup);
   const [enrolledCourses, setEnrolledCourses] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -48,7 +48,7 @@ function EnrolledCourses() {
   return (
     <div>
       <div className="mb-10  pt-10 pl-10">
-  <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
+  <h1 className="text-4xl md:text-5xl md:text-white font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
      Your Learning Journey
   </h1>
   <p className="text-gray-400 mt-2 text-lg">
@@ -70,6 +70,9 @@ function EnrolledCourses() {
               className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
               loading="lazy"
             />
+          </div>
+           <div className=" p-5">
+            <h1 className="text-xl text-white font-semibold">{course.courseName}</h1>
           </div>
 
           {/* Course Status & Category */}
@@ -103,12 +106,10 @@ function EnrolledCourses() {
               <span>&#8377;</span>
               <span>{course.price}</span>
             </div>
-          </div>
-
-          {/* Course Name */}
-          <div className="px-5 pb-5">
-            <h1 className="text-xl text-white font-semibold">{course.courseName}</h1>
-          </div>
+          </div>   
+          <div  className="flex justify-center items-center px-5 py-3">  <button onClick={()=>onStartLearning(course.courseName)} className="flex-1 p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl font-semibold hover:scale-105 transition-transform shadow-lg hover:shadow-xl">
+                    Start Learning
+                  </button></div>      
         </div>
       ))}
     </div>

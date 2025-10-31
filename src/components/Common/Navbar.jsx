@@ -18,6 +18,7 @@ function Navbar() {
   const user = useSelector((state) => state.profile.user);
   const location = useLocation();
 
+
   // decode token safely
   let role = "";
   if (token) {
@@ -47,6 +48,9 @@ function Navbar() {
 
   function routematch(route) {
     return matchPath({ path: route }, location.pathname);
+  }
+    if(location.pathname.startsWith("/dashboard")){
+    return null;
   }
 
   return (

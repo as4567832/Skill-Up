@@ -60,15 +60,15 @@ function Signup() {
 
   }
   return (
-    <div className="signupbackground  flex justify-center items-center p-20">
-      <div className="w-[50%] flex flex-col items-center my-3">
-        <h1 className="text-3xl font-bold text-white text-center">
+    <div className="signupbackground  flex justify-center items-center p-5 md:p-20">
+      <div className="md:w-[50%] w-full flex flex-col justify-center items-center my-3">
+        <h1 className="md:text-3xl text-xl  font-bold text-white text-center">
           Unlock your Learning potential with Skillup - Education for everyone!
         </h1>
         <p className="text-gray-400 font-semibold my-3">
           Your digital gateway to knowledge
         </p>
-        <form className="border my-6 border-1 p-5 border-gray-700 flex flex-col bg-[#151D30] items-center rounded-md flex flex-col gap-4" onSubmit={handleOnSubmit}>
+<form className="border p-5 border-gray-700 bg-[#151D30] rounded-md w-full max-w-2xl flex flex-col gap-4" onSubmit={handleOnSubmit}>
             <div className="flex  flex-col items-center text-center">
               <h1 className="text-4xl font-bold text-white">Create Account</h1>
               <p className="text-gray-300 my-3">Start your learning journey today</p>
@@ -96,7 +96,7 @@ function Signup() {
             </button>
           </div>
 
-          <div className="flex gap-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full gap-20">
             <div className="flex flex-col text-white gap-1">
               <label className="bg-transparent px-2" htmlFor="firstName">
                 First Name
@@ -143,7 +143,7 @@ function Signup() {
               />
             </div>
           </div>
-          <div className="flex gap-20">
+          <div className="md:flex grid grid-col-2 gap-5 md:gap-20">
             <div className="flex flex-col text-white gap-1">
               <label className="bg-transparent px-2" htmlFor="password">
                 Enter Password

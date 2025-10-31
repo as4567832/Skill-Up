@@ -5,13 +5,15 @@ import { TiTick } from "react-icons/ti";
 
 function Profile() {
   const token = useSelector((state) => state.signup.token);
+  const {user} = useSelector((state)=>state.profile);
+  console.log("User details are",user);
   let decode = "";
   if (token) {
     decode = jwtDecode(token);
     console.log(decode);
   }
   return (
-    <div className="bg-[#0F1729] h-screen text-blue-500 p-6">
+    <div className="bg-[#0F1729] min-h-screen text-blue-500 p-6">
       <div className=" mb-10">
         <h1 className="text-4xl font-bold text-white">
           Welcome, {decode.name}
@@ -36,7 +38,7 @@ function Profile() {
         <div className="rounded-xl border border-gray-800 p-3 bg-[#141D30] flex items-center justify-between">
             <div>
               <p className="text-gray-300">Total Courses</p>
-              <p className="text-white font-bold text-4xl">8</p>
+              <p className="text-white font-bold text-4xl">{user.courses.length}</p>
             </div>
         </div>
         <div className="rounded-xl border border-gray-800 p-3 bg-[#141D30] flex items-center justify-between">

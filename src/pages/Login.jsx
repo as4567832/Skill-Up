@@ -36,9 +36,9 @@ function LoginForm() {
     }
   return (
     <div className="login flex items-center justify-center p-10 bg-[#14192F]">
-      <div className="w-[40%] border-2 border-gray-600 p-3 rounded-md bg-[#151D30]">
-        <h1 className="text-5xl text-white font-bold text-center">Welcome Back</h1>
-        <p className=" text-center font-semibold text-gray-400 mt-3">
+      <div className="md:w-[40%] w-full border-2 border-gray-600 p-3 rounded-xl bg-[#151D30]">
+        <h1 className="md:text-5xl text-4xl text-white font-bold text-center">Welcome Back</h1>
+        <p className=" text-center  font-semibold text-gray-400 mt-3">
           Build Skills for Today,Tommorow and Beyond
         </p>
         <form className="pt-8 flex flex-col gap-5">
