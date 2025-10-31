@@ -107,7 +107,7 @@ function EnrolledCourses({onStartLearning}) {
               <span>{course.price}</span>
             </div>
           </div>   
-          <div  className="flex justify-center items-center px-5 py-3">  <button onClick={()=>onStartLearning(course.courseName)} className="flex-1 p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl font-semibold hover:scale-105 transition-transform shadow-lg hover:shadow-xl">
+          <div  className="flex justify-center items-center px-5 py-3">  <button onClick={()=>onStartLearning(course._id)} className="flex-1 p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl font-semibold hover:scale-105 transition-transform shadow-lg hover:shadow-xl">
                     Start Learning
                   </button></div>      
         </div>

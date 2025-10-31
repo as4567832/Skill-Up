@@ -21,6 +21,7 @@ export const courseEndpoints = {
     CREATE_SUB_SECTION_API:BASE_URL +"/course/addSubSection",
     FETCH_INSTRUCTOR_COURSES:BASE_URL + "/course/instructorCourses",
     SHOW_ALL_COURSES_API:BASE_URL + "/course/getAllCourses",
+    GET_COURSE_DETAILS_API:BASE_URL + "/course/getCourseDetails",
 }
 
 export const studentEndpoints = {

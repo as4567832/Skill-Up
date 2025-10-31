@@ -67,7 +67,7 @@ function Dashboard() {
       case "AddCourses":
         return <AddCourses />;
       case "Learning":
-        return <LearningPage></LearningPage>;  
+        return <LearningPage courseId ={selectedCourse}></LearningPage>;  
       default:
         return <Profile />;
     }

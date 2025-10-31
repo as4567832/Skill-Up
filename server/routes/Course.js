@@ -32,7 +32,7 @@ router.get("/getAllCourses",showAllCourses);
 router.post("/createRating",auth,isStudent,creatingRating);
 router.post("/getAverageRating",auth,isStudent,getAverageRating);
 router.get("/getReviews",getAllRating);
-router.get("/getCourseDetails",getCourseDetails);
+router.post("/getCourseDetails",getCourseDetails);
 router.get("/instructorCourses",auth,isInstructor,getInstructorCourses);
 
 

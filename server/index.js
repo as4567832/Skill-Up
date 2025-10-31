@@ -25,7 +25,7 @@ app.use(cors({
         "http://localhost:3000",
         "https://skill-up-edtech.vercel.app",
         "https://skill-up-omega.vercel.app",
-        "https://skill-up-edtech.vercel.app"
+        "https://skill-up-edtech.vercel.app",
     ],
     credentials: true,
 }));

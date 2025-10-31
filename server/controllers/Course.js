@@ -150,11 +150,10 @@ exports.getCourseDetails = async (req, res) => {
       .populate({
         path: "instructor",
         populate: {
-          path: "addfitionalDetails",
+          path: "additionalDetails",
         },
       })
       .populate("category")
-      .populate("ratingAndReviews")
       .populate({
         path: "courseContent",
         populate: {
@@ -172,7 +171,7 @@ if(!courseDetails){
     return res.status(200).json({
       success: true,
       message: "Data for all courses fetched successfully",
-      data: allCourses,
+      data: courseDetails,
     });
   } catch (error) {
     return res.status(500).json({
