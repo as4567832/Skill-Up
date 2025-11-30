@@ -50,7 +50,7 @@ function LearningPage({ courseId }) {
   }
   return (
     <div className="p-5 flex gap-5">
-      <div className="w-[55%] bg-[#15161C] overflow-hidden rounded-xl">
+      <div className="w-[55%] h-[40%] bg-[#15161C] overflow-hidden rounded-xl">
         <video className="" src={playerContent.url} controls width="600px"></video>
          <h1 className="text-white px-5 text-3xl mt-5  font-bold">{playerContent.title}</h1>
          <p className=" mt-5 px-5 text-gray-300">{playerContent.description}</p>

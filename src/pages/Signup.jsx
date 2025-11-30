@@ -96,7 +96,7 @@ function Signup() {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full gap-20">
+          <div className="grid grid-cols-1  lg:grid-cols-2 gap-4 w-full gap-20">
             <div className="flex flex-col text-white gap-1">
               <label className="bg-transparent px-2" htmlFor="firstName">
                 First Name
@@ -143,7 +143,7 @@ function Signup() {
               />
             </div>
           </div>
-          <div className="md:flex grid grid-col-2 gap-5 md:gap-20">
+          <div className=" grid grid-col-2 gap-5 md:gap-2">
             <div className="flex flex-col text-white gap-1">
               <label className="bg-transparent px-2" htmlFor="password">
                 Enter Password
